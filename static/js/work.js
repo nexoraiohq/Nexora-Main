@@ -290,8 +290,16 @@ function shuffleProjects(array) {
 function renderProjects(projectList) {
 
     /*
-       Clear current content.
+       Section may be commented out.
+       Bail safely so the rest of the page still works.
     */
+
+    if (!caseStudiesGrid) return;
+
+
+    /*
+       Clear current content.
+     */
 
     caseStudiesGrid.innerHTML = "";
 
@@ -503,9 +511,11 @@ function filterProjects(filter) {
 
 function changeCategory(filter) {
 
+    if (!caseStudiesGrid) return;
+
     /*
        Start the small outgoing animation.
-    */
+     */
 
     caseStudiesGrid.classList.remove(
         "is-entering"

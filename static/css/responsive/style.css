@@ -387,10 +387,15 @@ body.menu-open {
     .contact-details-card,
     .project-cards-grid,
     .timeline-grid,
+    .projects .projects-cont .content .card-2 .card-2-inner {
+        grid-template-columns: 1fr !important;
+    }
     .projects .projects-cont .content .card .text .txt-grid,
-    .projects .projects-cont .content .card-2 .card-2-inner,
     .projects .projects-cont .content .card-2 .card-2-inner .text .txt-grid {
         grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        row-gap: 20px !important;
+        column-gap: 20px !important;
     }
 
     .nexora-solution .soln-grid {

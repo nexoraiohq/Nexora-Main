@@ -540,6 +540,8 @@ POSITIONS
     grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .projects .projects-cont .content .card .text .txt-grid .cont-card .title {
