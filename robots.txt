@@ -1,4 +1,15 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /work.html
+Allow: /contact.html
 
 Sitemap: https://nexoraio.vercel.app/sitemap.xml
