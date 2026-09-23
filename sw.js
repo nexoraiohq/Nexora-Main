@@ -1,10 +1,10 @@
 /* ============================================================
-   NEXORA SERVICE WORKER
-   App shell precache + offline support
-   Scope: /  (this file MUST live at /sw.js)
-   ============================================================ */
+  NEXORA SERVICE WORKER
+  App shell precache + offline support
+  Scope: /  (this file MUST live at /sw.js)
+============================================================ */
 
-const CACHE_NAME = "nexora-v8";
+const CACHE_NAME = "nexora-v9";
 
 const APP_SHELL = [
   "/",
@@ -33,7 +33,9 @@ const APP_SHELL = [
   "/assets/favicon/nexora-favicon/favicon-96x96.png",
   "/assets/favicon/nexora-favicon/apple-touch-icon.png",
   "/assets/favicon/nexora-favicon/web-app-manifest-192x192.png",
-  "/assets/favicon/nexora-favicon/web-app-manifest-512x512.png"
+  "/assets/favicon/nexora-favicon/web-app-manifest-512x512.png",
+  "/assets/logo/favicon.svg",
+  "/assets/logo-white/favicon.svg"
 ];
 
 /* ============================================================
