@@ -187,7 +187,7 @@ No permission is granted to copy, modify, distribute, or use the project commerc
 ## Contact
 
 **Nexora Studio**
-Nairobi, Kenya
+Kisii, Kenya
 
 Website: https://nexoraio.vercel.app/
 

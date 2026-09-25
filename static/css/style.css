@@ -3335,3 +3335,16 @@ CHEVRON BUTTON
     }
 
 }
+
+/* Inline service links inside the final CTA copy */
+.final-cta .final-cta-cont .descr a {
+    color: #00D9FF;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.final-cta .final-cta-cont .descr a:hover {
+    color: #ffffff;
+}

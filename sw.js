@@ -4,7 +4,7 @@
   Scope: /  (this file MUST live at /sw.js)
 ============================================================ */
 
-const CACHE_NAME = "nexora-v9.4";
+const CACHE_NAME = "nexora-v9.6";
 
 const APP_SHELL = [
   "/",
@@ -13,6 +13,11 @@ const APP_SHELL = [
   "/services.html",
   "/work.html",
   "/contact.html",
+  "/web-design-kisii.html",
+  "/web-development-kisii.html",
+  "/beauty-wellness-web-design.html",
+  "/booking-websites.html",
+  "/web-design-kenya.html",
   "/404.html",
   "/manifest.json",
   "/static/css/style.css",

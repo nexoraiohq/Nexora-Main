@@ -11,5 +11,10 @@ Allow: /about.html
 Allow: /services.html
 Allow: /work.html
 Allow: /contact.html
+Allow: /web-design-kisii.html
+Allow: /web-development-kisii.html
+Allow: /beauty-wellness-web-design.html
+Allow: /booking-websites.html
+Allow: /web-design-kenya.html
 
 Sitemap: https://nexoraio.vercel.app/sitemap.xml
