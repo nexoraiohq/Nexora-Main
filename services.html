@@ -121,6 +121,9 @@
 
 
     <!-- Main CSS -->
+    <link rel="preload" href="/assets/fonts/SFPRODISPLAYREGULAR.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYMEDIUM.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYBOLD.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="static/css/style.css">
 
     <!-- Services CSS -->
@@ -133,14 +136,8 @@
 
     <script src="static/js/service.js" defer></script>
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
 
     <!-- ===== FIXES: header z-index + mobile scroll + white-logo contrast ===== -->
     <style>
@@ -188,7 +185,7 @@
                             width="143px"
                             height="auto"
                             alt="Nexora Studio logo"
-                            loading="eager"
+                            loading="eager" fetchpriority="high"
                             decoding="async"
                         >
                     </a>
@@ -273,7 +270,7 @@
                         class="btn-primary"
                     >
                         Start a Conversation
-                        <i class="fas fa-angle-right"></i>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -309,12 +306,6 @@
 
         </div>
 
-        <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install Nexora app" hidden>
-            <i class="fas fa-download"></i>
-            <span>Install App</span>
-        </button>
-
-
         <!-- SERVICE-HERO SECTION -->
         <section class="service-hero">
             <h3 class="eyebrow">Nexora Services</h3>
@@ -325,7 +316,7 @@
             </h1>
 
             <div class="cta-btn">
-                <a href="#digital-experiences" class="btn-primary">Explore our services <i class="fas fa-angle-right"></i></a>
+                <a href="#digital-experiences" class="btn-primary">Explore our services <i class="fas fa-angle-right" aria-hidden="true"></i></a>
 
                 <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I'm%20on%20the%20Services%20hero%20section%20and%20want%20to%20explore%20the%20right%20digital%20services%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary service-secondary">Start a conversation</a>
             </div>
@@ -1080,7 +1071,7 @@
                                 What does Nexora build?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1107,7 +1098,7 @@
                                 Who is Nexora built for?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1135,7 +1126,7 @@
                             </span>
 
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
 
                         </button>
@@ -1167,7 +1158,7 @@
                                 Can Nexora work with my existing website?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1199,7 +1190,7 @@
                                 Does Nexora build backend systems and payment integrations?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1230,7 +1221,7 @@
                                 How long does a project take?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1266,7 +1257,7 @@
                                 How much does a project cost?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1296,7 +1287,7 @@
                                 What happens after the website launches?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1337,12 +1328,18 @@
 
                 <!-- CTA -->
                 <div class="hero-cta final">
-                    <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I've%20reviewed%20your%20services%20and%20would%20like%20to%20plan%20a%20digital%20system%20that%20moves%20my%20business%20forward." target="_blank" rel="noopener" class="btn-primary btn-secondary" style="border: 1.2px solid rgba(254, 254, 254, 0.218);">Start a Conversation <i class="fas fa-angle-right"></i></a>
+                    <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I've%20reviewed%20your%20services%20and%20would%20like%20to%20plan%20a%20digital%20system%20that%20moves%20my%20business%20forward." target="_blank" rel="noopener" class="btn-primary btn-secondary" style="border: 1.2px solid rgba(254, 254, 254, 0.218);">Start a Conversation <i class="fas fa-angle-right" aria-hidden="true"></i></a>
 
-                    <a href="/work.html" class="btn-primary work-primary">View our work <i class="fas fa-angle-right"></i></a>
+                    <a href="/work.html" class="btn-primary work-primary">View our work <i class="fas fa-angle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
+        <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install App" hidden>
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Install App</span>
+        </button>
+
+
     </main>
 
     <!-- FOOTER -->
@@ -1361,19 +1358,19 @@
 
                     <nav>
                         <a href="/">
-                            <li>Home</li>
+                            <span>Home</span>
                         </a>
                         <a href="about.html">
-                            <li>About</li>
+                            <span>About</span>
                         </a>
                         <a href="services.html">
-                            <li>Services</li>
+                            <span>Services</span>
                         </a>
                         <a href="work.html">
-                            <li>Work</li>
+                            <span>Work</span>
                         </a>
                         <a href="contact.html">
-                            <li>Contact</li>
+                            <span>Contact</span>
                         </a>
                     </nav>
                 </div>
@@ -1383,16 +1380,16 @@
 
                     <nav>
                         <a href="#strategy">
-                            <li>Strategy</li>
+                            <span>Strategy</span>
                         </a>
                         <a href="#digital-experiences">
-                            <li>Digital Experiences</li>
+                            <span>Digital Experiences</span>
                         </a>
                         <a href="#business-systems">
-                            <li>Business Systems</li>
+                            <span>Business Systems</span>
                         </a>
                         <a href="#intelligence">
-                            <li>Intelligence</li>
+                            <span>Intelligence</span>
                         </a>
                     </nav>
                 </div>
@@ -1402,10 +1399,10 @@
 
                     <nav>
                         <a href="work.html#explore-work">
-                            <li>Case Studies</li>
+                            <span>Case Studies</span>
                         </a>
                         <a href="index.html#faq">
-                            <li>FAQ</li>
+                            <span>FAQ</span>
                         </a>
                         </nav>
                 </div>
@@ -1415,10 +1412,10 @@
 
                     <nav>
                         <a href="https://wa.me/254713324672" title="Chat with Nexora Studio on WhatsApp" target="_blank" rel="noopener">
-                            <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                            <span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
                         </a>
                         <a href="contact.html" title="Contact Nexora Studio">
-                            <li><i class="fas fa-envelope"></i> Enquiries</li>
+                            <span><i class="fas fa-envelope" aria-hidden="true"></i> Enquiries</span>
                         </a>
                     </nav>
                 </div>
@@ -1431,7 +1428,7 @@
 
                 <nav>
                     <a href="contact.html">
-                        <li>Contact</li>
+                        <span>Contact</span>
                     </a>
                 </nav>
             </div>

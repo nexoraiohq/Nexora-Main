@@ -36,9 +36,9 @@
     <meta name="twitter:title" content="Nexora Studio | Web Design Kisii &amp; Website Development Kenya" />
     <meta name="twitter:description" content="Web design and website development in Kisii, Kenya, serving businesses nationwide." />
     <meta name="twitter:image" content="https://nexoraio.vercel.app/assets/favicon/nexora-favicon/web-app-manifest-512x512.png" />
+
     <meta name="google-site-verification" content="uiMzSKUq7FWRWaEituM9isg5W3Hj8wfIv45UJ52i-fg" />
     <!-- Structured Data: Organization + Local Business + WebSite -->
-
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -252,13 +252,10 @@
                 }
             ]
 }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+</script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
 
 
     <!-- Primary favicon -->
@@ -284,6 +281,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- CSS -->
+    <link rel="preload" href="/assets/fonts/SFPRODISPLAYREGULAR.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYMEDIUM.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYBOLD.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/nevera/Nevera-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/static/css/style.css">
 
     <link rel="stylesheet" href="static/css/responsive/style.css">
@@ -308,7 +309,7 @@
             <!-- Logo -->
             <div class="logo">
                 <a class="logo-link" aria-label="Nexora home">
-                    <img class="logo-text" src="/assets/logo/favicon.svg" width="143px" height="auto" alt="Nexora Studio logo" loading="eager">
+                    <img class="logo-text" src="/assets/logo/favicon.svg" width="143px" height="auto" alt="Nexora Studio logo" loading="eager" fetchpriority="high">
                 </a>
             </div>
 
@@ -343,7 +344,7 @@
 
             <!-- CTA -->
             <div class="header-cta">
-                <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%27m%20on%20the%20homepage%20and%20would%20like%20to%20start%20a%20conversation%20about%20building%20a%20stronger%20digital%20system%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary">Start a Conversation <i class="fas fa-angle-right"></i></a>
+                <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%27m%20on%20the%20homepage%20and%20would%20like%20to%20start%20a%20conversation%20about%20building%20a%20stronger%20digital%20system%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary">Start a Conversation <i class="fas fa-angle-right" aria-hidden="true"></i></a>
             </div>
 
             <!-- Mobile Toggle -->
@@ -367,12 +368,6 @@
     </div>
 
 
-    <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install Nexora app" hidden>
-        <i class="fas fa-download"></i>
-        <span>Install App</span>
-    </button>
-
-
     <main>
         <!-- HERO SECTION -->
         <section class="hero-wrapper">
@@ -386,7 +381,7 @@
 
                 <!-- CTA -->
                 <div class="hero-cta">
-                    <a href="#explore-nexora" class="btn-primary">Explore Nexora <i class="fas fa-angle-right"></i></a>
+                    <a href="#explore-nexora" class="btn-primary">Explore Nexora <i class="fas fa-angle-right" aria-hidden="true"></i></a>
 
                     <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%27m%20using%20the%20homepage%20menu%20and%20would%20like%20to%20talk%20about%20how%20Nexora%20can%20help%20my%20business%20move%20forward." target="_blank" rel="noopener" class="btn-secondary">Start a Conversation</a>
                 </div>
@@ -395,9 +390,9 @@
             <!-- Stats -->
             <div class="stats">
 
-                <h3 class="stat-header">
+                <h2 class="stat-header">
                     BUILT FOR BUSINESSES READY TO GROW WITH INTENT
-                </h3>
+                </h2>
 
                 <div class="stat-carousel">
 
@@ -445,16 +440,28 @@
                 <!-- Image Gallery -->
                 <div class="problem-grid">
                     <div class="card one active-card">
-                        <img loading="lazy" src="/assets/Hard-to-be-discovered.png" alt="Hard to discover" />
+                        <picture>
+                            <source type="image/webp" srcset="/assets/Hard-to-be-discovered-640.webp 640w, /assets/Hard-to-be-discovered-1024.webp 1024w, /assets/Hard-to-be-discovered-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)">
+                            <img loading="lazy" src="/assets/Hard-to-be-discovered.png" alt="Hard to discover" width="1536" height="1024" decoding="async"/>
+                        </picture>
                     </div>
                     <div class="card two">
-                        <img loading="lazy" src="assets/hard-to-convert.png" alt="Hard to convert" />
+                        <picture>
+                            <source type="image/webp" srcset="assets/hard-to-convert-640.webp 640w, assets/hard-to-convert-1024.webp 1024w, assets/hard-to-convert-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)">
+                            <img loading="lazy" src="assets/hard-to-convert.png" alt="Hard to convert" width="1536" height="1024" decoding="async"/>
+                        </picture>
                     </div>
                     <div class="card three">
-                        <img loading="lazy" src="/assets/hard-to-operate.png" alt="Hard to operate" />
+                        <picture>
+                            <source type="image/webp" srcset="/assets/hard-to-operate-640.webp 640w, /assets/hard-to-operate-1024.webp 1024w, /assets/hard-to-operate-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)">
+                            <img loading="lazy" src="/assets/hard-to-operate.png" alt="Hard to operate" width="1536" height="1024" decoding="async"/>
+                        </picture>
                     </div>
                     <div class="card four">
-                        <img loading="lazy" src="/assets/hard-to-scale.png" alt="Hard to scale" />
+                        <picture>
+                            <source type="image/webp" srcset="/assets/hard-to-scale-640.webp 640w, /assets/hard-to-scale-1024.webp 1024w, /assets/hard-to-scale-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)">
+                            <img loading="lazy" src="/assets/hard-to-scale.png" alt="Hard to scale" width="1536" height="1024" decoding="async"/>
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -726,7 +733,10 @@
                 <div class="soln-grid">
                     <div class="card">
                         <div class="image">
-                            <img src="/assets/Hard-to-be-discovered.png" alt="Illustration of a business that is difficult to discover online" loading="lazy" decoding="async">
+                            <picture>
+                                <source type="image/webp" srcset="/assets/Hard-to-be-discovered-640.webp 640w, /assets/Hard-to-be-discovered-1024.webp 1024w, /assets/Hard-to-be-discovered-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)">
+                                <img src="/assets/Hard-to-be-discovered.png" alt="Illustration of a business that is difficult to discover online" loading="lazy" decoding="async" width="1536" height="1024">
+                            </picture>
                         </div>
 
                         <p class="eyebrow">
@@ -746,7 +756,10 @@
 
                     <div class="card">
                         <div class="image">
-                            <img src="/assets/hard-to-convert.png" alt="Illustration of a business website that struggles to convert visitors" loading="lazy" decoding="async">
+                            <picture>
+                                <source type="image/webp" srcset="/assets/hard-to-convert-640.webp 640w, /assets/hard-to-convert-1024.webp 1024w, /assets/hard-to-convert-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)">
+                                <img src="/assets/hard-to-convert.png" alt="Illustration of a business website that struggles to convert visitors" loading="lazy" decoding="async" width="1536" height="1024">
+                            </picture>
                         </div>
 
                         <p class="eyebrow">
@@ -768,7 +781,10 @@
 
                     <div class="card">
                         <div class="image">
-                            <img src="/assets/hard-to-operate.png" alt="Illustration of disconnected business systems that are hard to operate" loading="lazy" decoding="async">
+                            <picture>
+                                <source type="image/webp" srcset="/assets/hard-to-operate-640.webp 640w, /assets/hard-to-operate-1024.webp 1024w, /assets/hard-to-operate-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)">
+                                <img src="/assets/hard-to-operate.png" alt="Illustration of disconnected business systems that are hard to operate" loading="lazy" decoding="async" width="1536" height="1024">
+                            </picture>
                         </div>
 
                         <p class="eyebrow">
@@ -792,7 +808,10 @@
 
                     <div class="card">
                         <div class="image">
-                            <img src="/assets/hard-to-scale.png" alt="Illustration of a digital foundation that is hard to scale" loading="lazy" decoding="async">
+                            <picture>
+                                <source type="image/webp" srcset="/assets/hard-to-scale-640.webp 640w, /assets/hard-to-scale-1024.webp 1024w, /assets/hard-to-scale-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)">
+                                <img src="/assets/hard-to-scale.png" alt="Illustration of a digital foundation that is hard to scale" loading="lazy" decoding="async" width="1536" height="1024">
+                            </picture>
                         </div>
 
                         <p class="eyebrow">
@@ -843,10 +862,10 @@
                     <div class="stories-frame" id="storiesFrame">
 
                         <!-- Crossfading background image layers (one per card) -->
-                        <div class="frame-image is-active" style="--img: url('https://i.pinimg.com/736x/f2/39/67/f23967b81c9321bb4d333e9cea00345d.jg');"></div>
-                        <div class="frame-image" style="--img: url('https://i.pinimg.com/736x/5c/23/dd/5c23dda0dc1a6a7774c7c3b840f3de4d.jg');"></div>
-                        <div class="frame-image" style="--img: url('https://i.pinimg.com/1200x/d8/f1/fa/d8f1fa8bde3860818dc978b3ae692891.jg');"></div>
-                        <div class="frame-image" style="--img: url('https://i.pinimg.com/736x/cb/0e/f2/cb0ef2ea9fc456b591b532a7aa987c27.jg');"></div>
+                        <!-- <div class="frame-image is-active" style="--img: url('https://i.pinimg.com/736x/20/86/e5/2086e52eb6026b28f48b535a7227f394.jpg');"></div>
+                        <div class="frame-image" style="--img: url('https://i.pinimg.com/736x/c4/aa/c5/c4aac5b226780a548aa652cde03558c9.jpg');"></div>
+                        <div class="frame-image" style="--img: url('https://i.pinimg.com/1200x/a8/e9/d1/a8e9d1455aabd3daa9fd5005c878e343.jpg');"></div>
+                        <div class="frame-image" style="--img: url('https://i.pinimg.com/1200x/25/d8/93/25d893d88dba0416150cecb65863e28a.jpg');"></div> -->
 
                         <!-- readability veil -->
                         <div class="frame-veil"></div>
@@ -1146,7 +1165,7 @@
                                     <h4 class="title">Project Overview</h4>
 
                                     <div class="group-link">
-                                        <a href="https://states-barbershop.vercel.app/" target="_blank" rel="noopener" class="link btn-primary">Preview Website <i class="fas fa-angle-right" style="font-size: 12px;"></i></a>
+                                        <a href="https://states-barbershop.vercel.app/" target="_blank" rel="noopener" class="link btn-primary">Preview Website <i class="fas fa-angle-right" style="font-size: 12px;" aria-hidden="true"></i></a>
                                         <!-- <a href="#" class="link btn-primary">View Case Studies <i class="fas fa-angle-right" style="font-size: 12px;"></i></a> -->
                                     </div>
                                 </div>
@@ -1155,11 +1174,17 @@
 
                         <div class="image-cont">
                             <div class="image-main">
-                                <img loading="lazy" src="assets/proof-through-work/overlay.png" alt="Nexora digital experience">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/proof-through-work/overlay-540.webp 540w, assets/proof-through-work/overlay-921.webp 921w" sizes="270px">
+                                    <img loading="lazy" src="assets/proof-through-work/overlay.png" alt="Nexora digital experience" width="921" height="1708" decoding="async">
+                                </picture>
                             </div>
 
                             <div class="image-secondary">
-                                <img src="assets/proof-through-work/main.png" alt="States Barbershop website homepage designed and built by Nexora Studio" loading="lazy" decoding="async">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/proof-through-work/main-540.webp 540w, assets/proof-through-work/main-921.webp 921w" sizes="267px">
+                                    <img src="assets/proof-through-work/main.png" alt="States Barbershop website homepage designed and built by Nexora Studio" loading="lazy" decoding="async" width="921" height="1708">
+                                </picture>
                             </div>
 
                         </div>
@@ -1304,8 +1329,8 @@
 
             <div class="arrows">
                 <div class="main">
-                    <button class="arrow arrow-left"><i class="fas fa-arrow-left"></i></button>
-                    <button class="arrow arrow-right"><i class="fas fa-arrow-right"></i></button>
+                    <button class="arrow arrow-left" aria-label="Previous"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+                    <button class="arrow arrow-right" aria-label="Next"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
@@ -1691,7 +1716,7 @@
                                 Who do you work with?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1718,7 +1743,7 @@
                                 What does Nexora actually provide?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1746,7 +1771,7 @@
                             </span>
 
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
 
                         </button>
@@ -1774,7 +1799,7 @@
                                 How does the process work?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1801,7 +1826,7 @@
                                 How long does a project take
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1827,7 +1852,7 @@
                                 What happens after launch?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1853,7 +1878,7 @@
                                 Can Nexora maintain the website?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1878,7 +1903,7 @@
                                 Do you provide SEO?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1903,7 +1928,7 @@
                                 Can customers book through WhatsApp?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1928,7 +1953,7 @@
                                 How do I get started?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1953,7 +1978,7 @@
                                 How much does a website cost?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -1978,7 +2003,7 @@
                                 How much do I pay before the project starts?
                             </span>
 
-                            <span class="faq-icon"><i class="fas fa-angle-right"></i></span>
+                            <span class="faq-icon"><i class="fas fa-angle-right" aria-hidden="true"></i></span>
 
                         </button>
 
@@ -2016,12 +2041,18 @@
 
                 <!-- CTA -->
                 <div class="hero-cta final">
-                    <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%20reached%20the%20homepage%20final%20section%20and%20would%20like%20to%20discuss%20what%20we%20could%20build%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary btn-secondary" style="border: 1.2px solid rgba(254, 254, 254, 0.218);">Start a Conversation <i class="fas fa-angle-right"></i></a>
+                    <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%20reached%20the%20homepage%20final%20section%20and%20would%20like%20to%20discuss%20what%20we%20could%20build%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary btn-secondary" style="border: 1.2px solid rgba(254, 254, 254, 0.218);">Start a Conversation <i class="fas fa-angle-right" aria-hidden="true"></i></a>
 
-                    <a href="/work.html" class="btn-primary work-primary">View our work <i class="fas fa-angle-right"></i></a>
+                    <a href="/work.html" class="btn-primary work-primary">View our work <i class="fas fa-angle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
+    <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install App" hidden>
+        <i class="fas fa-download" aria-hidden="true"></i>
+        <span>Install App</span>
+    </button>
+
+
     </main>
 
 
@@ -2041,19 +2072,19 @@
 
                     <nav>
                         <a href="/">
-                            <li>Home</li>
+                            <span>Home</span>
                         </a>
                         <a href="about.html">
-                            <li>About</li>
+                            <span>About</span>
                         </a>
                         <a href="services.html">
-                            <li>Services</li>
+                            <span>Services</span>
                         </a>
                         <a href="work.html">
-                            <li>Work</li>
+                            <span>Work</span>
                         </a>
                         <a href="contact.html">
-                            <li>Contact</li>
+                            <span>Contact</span>
                         </a>
                     </nav>
                 </div>
@@ -2063,16 +2094,16 @@
 
                     <nav>
                         <a href="/services.html#strategy">
-                            <li>Strategy</li>
+                            <span>Strategy</span>
                         </a>
                         <a href="/services.html#digital-experiences">
-                            <li>Digital Experiences</li>
+                            <span>Digital Experiences</span>
                         </a>
                         <a href="/services.html#business-systems">
-                            <li>Business Systems</li>
+                            <span>Business Systems</span>
                         </a>
                         <a href="/services.html#intelligence">
-                            <li>Intelligence</li>
+                            <span>Intelligence</span>
                         </a>
                     </nav>
                 </div>
@@ -2082,10 +2113,10 @@
 
                     <nav>
                         <a href="work.html#explore-work">
-                            <li>Case Studies</li>
+                            <span>Case Studies</span>
                         </a>
                         <a href="index.html#faq">
-                            <li>FAQ</li>
+                            <span>FAQ</span>
                         </a>
                         </nav>
                 </div>
@@ -2095,10 +2126,10 @@
 
                     <nav>
                         <a href="https://wa.me/254713324672" title="Chat with Nexora Studio on WhatsApp" target="_blank" rel="noopener">
-                            <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                            <span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
                         </a>
                         <a href="contact.html" title="Contact Nexora Studio">
-                            <li><i class="fas fa-envelope"></i> Enquiries</li>
+                            <span><i class="fas fa-envelope" aria-hidden="true"></i> Enquiries</span>
                         </a>
                     </nav>
                 </div>
@@ -2111,7 +2142,7 @@
 
                 <nav>
                     <a href="contact.html">
-                        <li>Contact</li>
+                        <span>Contact</span>
                     </a>
                 </nav>
             </div>

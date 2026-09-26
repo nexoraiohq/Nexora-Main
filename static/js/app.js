@@ -301,10 +301,10 @@ if (carousel && step && statValues) {
 
     // One color per card, in order
     const COLORS = [
-        [24, 86, 125],    // card 1 — More Visibility
-        [91, 73, 126],    // card 2 — More Trust
-        [133, 55, 62],    // card 3 — More Control
-        [18, 105, 105],   // card 4 — More Momentum
+        [23, 83, 121],     // card 1 — More Visibility
+        [88, 71, 122],     // card 2 — More Trust
+        [127, 52, 59],     // card 3 — More Control
+        [17, 101, 101],     // card 4 — More Momentum
     ];
 
     let activeIndex = 0;
@@ -1065,9 +1065,3 @@ faqItems.forEach(item => {
     });
 
 });
-
-
-
-
-
-

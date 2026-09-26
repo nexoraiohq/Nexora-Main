@@ -20,12 +20,9 @@
     <meta name="twitter:title" content="Page Not Found | Nexora Studio, Kisii, Kenya" />
     <meta name="twitter:description" content="This page could not be found. Explore Nexora Studio web design services in Kisii, Kenya." />
     <meta name="twitter:image" content="https://nexoraio.vercel.app/assets/favicon/nexora-favicon/web-app-manifest-512x512.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
 
     <meta name="google-site-verification" content="uiMzSKUq7FWRWaEituM9isg5W3Hj8wfIv45UJ52i-fg" />
 
@@ -52,6 +49,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- CSS -->
+    <link rel="preload" href="/assets/fonts/SFPRODISPLAYREGULAR.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYMEDIUM.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYBOLD.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/static/css/style.css">
     <script defer src="/static/js/pwa.js"></script>
     <script defer src="/static/js/app.js"></script>
@@ -71,7 +71,7 @@
             <!-- Logo -->
             <div class="logo">
                 <a href="/" class="logo-link" aria-label="Nexora home">
-                    <img class="logo-text" src="/assets/logo/favicon.svg" width="143px" height="auto" alt="Nexora Studio logo" loading="eager">
+                    <img class="logo-text" src="/assets/logo/favicon.svg" width="143px" height="auto" alt="Nexora Studio logo" loading="eager" fetchpriority="high">
                 </a>
             </div>
 
@@ -106,7 +106,7 @@
 
             <!-- CTA -->
             <div class="header-cta">
-                <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%20landed%20on%20the%20404%20page%20and%20would%20like%20help%20finding%20the%20right%20place%20to%20start%20a%20project%20conversation." target="_blank" rel="noopener" class="btn-primary">Start a Conversation <i class="fas fa-angle-right"></i></a>
+                <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%20landed%20on%20the%20404%20page%20and%20would%20like%20help%20finding%20the%20right%20place%20to%20start%20a%20project%20conversation." target="_blank" rel="noopener" class="btn-primary">Start a Conversation <i class="fas fa-angle-right" aria-hidden="true"></i></a>
             </div>
 
             <!-- Mobile Toggle -->
@@ -129,12 +129,6 @@
         </div>
     </div>
 
-    <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install Nexora app" hidden>
-        <i class="fas fa-download"></i>
-        <span>Install App</span>
-    </button>
-
-
     <!-- ═══════════════════════════════════════════════════════ -->
     <!-- 404 CONTENT — STRIPE-STYLE ELEVATED                   -->
     <!-- ═══════════════════════════════════════════════════════ -->
@@ -152,13 +146,13 @@
 
                 <a href="services.html" class="error-card">
                     <div class="card-icon icon-services">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">
                         Services
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Explore our full suite of digital solutions, from strategy to development.</p>
@@ -166,13 +160,13 @@
 
                 <a href="work.html" class="error-card">
                     <div class="card-icon icon-work">
-                        <i class="fas fa-layer-group"></i>
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">
                         Our Work
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Browse case studies and see how we move businesses forward.</p>
@@ -180,13 +174,13 @@
 
                 <a href="about.html" class="error-card">
                     <div class="card-icon icon-about">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">
                         About
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Learn about Nexora's mission, team, and the values that drive us.</p>
@@ -194,13 +188,13 @@
 
                 <a href="/" class="error-card">
                     <div class="card-icon icon-home">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-home" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">
                         Homepage
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Return to the main base and start your journey from the top.</p>
@@ -208,13 +202,13 @@
 
                 <a href="contact.html" class="error-card">
                     <div class="card-icon icon-contact">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">
                         Contact
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Reach out directly. We'd love to hear about your next project.</p>
@@ -222,13 +216,13 @@
 
                 <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I%20landed%20on%20the%20404%20page%20but%20I%20want%20to%20start%20a%20project%20conversation%20and%20tell%20you%20what%20I'm%20building." target="_blank" rel="noopener" class="error-card">
                     <div class="card-icon icon-start">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
                     </div>
                     <h2 class="card-title">Start a
                         Project
 
                         <span>
-                            <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                            <i class="fas fa-arrow-right" style="font-size: 11px;" aria-hidden="true"></i>
                         </span>
                     </h2>
                     <p class="card-descr">Tell us what you're building and let's create something extraordinary.</p>
@@ -237,6 +231,12 @@
             </nav>
 
         </div>
+    <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install App" hidden>
+        <i class="fas fa-download" aria-hidden="true"></i>
+        <span>Install App</span>
+    </button>
+
+
     </main>
 
 
@@ -256,19 +256,19 @@
 
                     <nav>
                         <a href="/">
-                            <li>Home</li>
+                            <span>Home</span>
                         </a>
                         <a href="about.html">
-                            <li>About</li>
+                            <span>About</span>
                         </a>
                         <a href="services.html">
-                            <li>Services</li>
+                            <span>Services</span>
                         </a>
                         <a href="work.html">
-                            <li>Work</li>
+                            <span>Work</span>
                         </a>
                         <a href="contact.html">
-                            <li>Contact</li>
+                            <span>Contact</span>
                         </a>
                     </nav>
                 </div>
@@ -278,16 +278,16 @@
 
                     <nav>
                         <a href="/services.html#strategy">
-                            <li>Strategy</li>
+                            <span>Strategy</span>
                         </a>
                         <a href="/services.html#digital-experiences">
-                            <li>Digital Experiences</li>
+                            <span>Digital Experiences</span>
                         </a>
                         <a href="/services.html#business-systems">
-                            <li>Business Systems</li>
+                            <span>Business Systems</span>
                         </a>
                         <a href="/services.html#intelligence">
-                            <li>Intelligence</li>
+                            <span>Intelligence</span>
                         </a>
                     </nav>
                 </div>
@@ -297,10 +297,10 @@
 
                     <nav>
                         <a href="work.html#explore-work">
-                            <li>Case Studies</li>
+                            <span>Case Studies</span>
                         </a>
                         <a href="index.html#faq">
-                            <li>FAQ</li>
+                            <span>FAQ</span>
                         </a>
                         </nav>
                 </div>
@@ -310,10 +310,10 @@
 
                     <nav>
                         <a href="https://wa.me/254713324672" title="Chat with Nexora Studio on WhatsApp" target="_blank" rel="noopener">
-                            <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                            <span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
                         </a>
                         <a href="contact.html" title="Contact Nexora Studio">
-                            <li><i class="fas fa-envelope"></i> Enquiries</li>
+                            <span><i class="fas fa-envelope" aria-hidden="true"></i> Enquiries</span>
                         </a>
                     </nav>
                 </div>
@@ -326,7 +326,7 @@
 
                 <nav>
                     <a href="contact.html">
-                        <li>Contact</li>
+                        <span>Contact</span>
                     </a>
                 </nav>
             </div>

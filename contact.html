@@ -91,6 +91,9 @@
 
 
     <!-- Main CSS -->
+    <link rel="preload" href="/assets/fonts/SFPRODISPLAYREGULAR.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYMEDIUM.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SFPRODISPLAYBOLD.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="static/css/style.css">    <!-- Index Style CSS -->
 
 
@@ -108,14 +111,8 @@
 
     <script src="static/js/contact.js" defer></script>
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
 
     <!-- ===== FIX 1: header stays above hero content on desktop + white-logo contrast ===== -->
     <!-- ===== FIX 2: ensure smooth scrolling on mobile (no double-scroll) ===== -->
@@ -164,7 +161,7 @@
                             width="143px"
                             height="auto"
                             alt="Nexora Studio logo"
-                            loading="eager"
+                            loading="eager" fetchpriority="high"
                             decoding="async"
                         >
                     </a>
@@ -249,7 +246,7 @@
                         class="btn-primary"
                     >
                         Start a Conversation
-                        <i class="fas fa-angle-right"></i>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -285,12 +282,6 @@
 
         </div>
 
-        <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install Nexora app" hidden>
-            <i class="fas fa-download"></i>
-            <span>Install App</span>
-        </button>
-
-
         <!-- SERVICE-HERO SECTION -->
         <section class="service-hero">
             <h3 class="eyebrow">Let's Talk</h3>
@@ -303,7 +294,7 @@
             <div class="cta-btn">
                 <a href="https://wa.me/254713324672?text=Hi%20Nexora%2C%20I'm%20on%20the%20Contact%20page%20and%20want%20to%20tell%20you%20what%20I'm%20working%20toward." target="_blank" rel="noopener" class="btn-primary service-secondary">Start a conversation</a>
 
-                <a href="work.html" class="btn-primary">View Our Work <i class="fas fa-angle-right"></i></a>
+                <a href="work.html" class="btn-primary">View Our Work <i class="fas fa-angle-right" aria-hidden="true"></i></a>
             </div>
 
             <p class="highlight">No complicated brief required. Just tell us what you're trying to achieve.</p>
@@ -342,7 +333,7 @@
 
                         <p class="descr">We'd love to talk about how we can work together.</p>
 
-                        <a href="mailto:salonflow01@gmail.com" target="_blank" rel="noopener" class="btn-primary">Send us an Email <i class="fas fa-angle-right"></i></a>
+                        <a href="mailto:salonflow01@gmail.com" target="_blank" rel="noopener" class="btn-primary">Send us an Email <i class="fas fa-angle-right" aria-hidden="true"></i></a>
                     </div>
 
                     <!-- Card 2 -->
@@ -357,7 +348,7 @@
 
                         <p class="descr">Get in touch and let us know how we can help.</p>
 
-                        <a href="https://wa.me/254713324672" target="_blank" rel="noopener" class="btn-primary">Chat on Whatsapp <i class="fas fa-angle-right"></i></a>
+                        <a href="https://wa.me/254713324672" target="_blank" rel="noopener" class="btn-primary">Chat on Whatsapp <i class="fas fa-angle-right" aria-hidden="true"></i></a>
                     </div>
 
                     <!-- Card 3 -->
@@ -443,7 +434,7 @@
                             </div>
 
                             <span class="card-arrow">
-                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </span>
 
                         </div>
@@ -481,7 +472,7 @@
                             </div>
 
                             <span class="card-arrow">
-                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </span>
 
                         </div>
@@ -519,7 +510,7 @@
                             </div>
 
                             <span class="card-arrow">
-                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </span>
 
                         </div>
@@ -554,7 +545,7 @@
 
                         Continue
 
-                        <i class="fas fa-angle-right"></i>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
 
                     </button>
 
@@ -656,7 +647,7 @@
                                 </p>
                                 <button type="submit" class="btn-primary enquiry-submit-btn">
                                     Send Enquiry
-                                    <i class="fas fa-angle-right"></i>
+                                    <i class="fas fa-angle-right" aria-hidden="true"></i>
                                 </button>
                             </div>
 
@@ -666,11 +657,10 @@
 
                     <!-- RIGHT COLUMN – new image -->
                     <div class="contact-col-right">
-                        <img
-                        src="assets/contact-form-img.jpg"
-                        alt="Team collaborating on a project"
-                        loading="lazy"
-                        >
+                        <picture>
+                            <source type="image/webp" srcset="assets/contact-form-img-640.webp 640w, assets/contact-form-img-1024.webp 1024w" sizes="(min-width: 769px) 700px, max(calc(100vw - 40px), 400px)">
+                            <img src="assets/contact-form-img.jpg" alt="Team collaborating on a project" loading="lazy" width="1024" height="1024" decoding="async">
+                        </picture>
                     </div> <!-- /contact-col-right -->
 
                 </div> <!-- /contact-row -->
@@ -678,6 +668,12 @@
             </div> <!-- /prob-cont -->
 
         </section>
+        <button id="installAppBtnFloating" class="floating-install-btn" type="button" aria-label="Install App" hidden>
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Install App</span>
+        </button>
+
+
     </main>
 
     <!-- FOOTER -->
@@ -696,19 +692,19 @@
 
                     <nav>
                         <a href="/">
-                            <li>Home</li>
+                            <span>Home</span>
                         </a>
                         <a href="about.html">
-                            <li>About</li>
+                            <span>About</span>
                         </a>
                         <a href="services.html">
-                            <li>Services</li>
+                            <span>Services</span>
                         </a>
                         <a href="work.html">
-                            <li>Work</li>
+                            <span>Work</span>
                         </a>
                         <a href="contact.html">
-                            <li>Contact</li>
+                            <span>Contact</span>
                         </a>
                     </nav>
                 </div>
@@ -718,16 +714,16 @@
 
                     <nav>
                         <a href="/services.html#strategy">
-                            <li>Strategy</li>
+                            <span>Strategy</span>
                         </a>
                         <a href="/services.html#digital-experiences">
-                            <li>Digital Experiences</li>
+                            <span>Digital Experiences</span>
                         </a>
                         <a href="/services.html#business-systems">
-                            <li>Business Systems</li>
+                            <span>Business Systems</span>
                         </a>
                         <a href="/services.html#intelligence">
-                            <li>Intelligence</li>
+                            <span>Intelligence</span>
                         </a>
                     </nav>
                 </div>
@@ -737,10 +733,10 @@
 
                     <nav>
                         <a href="work.html#explore-work">
-                            <li>Case Studies</li>
+                            <span>Case Studies</span>
                         </a>
                         <a href="index.html#faq">
-                            <li>FAQ</li>
+                            <span>FAQ</span>
                         </a>
                         </nav>
                 </div>
@@ -750,10 +746,10 @@
 
                     <nav>
                         <a href="https://wa.me/254713324672" title="Chat with Nexora Studio on WhatsApp" target="_blank" rel="noopener">
-                            <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                            <span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
                         </a>
                         <a href="contact.html" title="Contact Nexora Studio">
-                            <li><i class="fas fa-envelope"></i> Enquiries</li>
+                            <span><i class="fas fa-envelope" aria-hidden="true"></i> Enquiries</span>
                         </a>
                     </nav>
                 </div>
@@ -766,7 +762,7 @@
 
                 <nav>
                     <a href="contact.html">
-                        <li>Contact</li>
+                        <span>Contact</span>
                     </a>
                 </nav>
             </div>

@@ -1,71 +1,81 @@
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYREGULAR.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYMEDIUM.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYBOLD.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
     font-weight: 200;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYTHINITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
     font-weight: 100;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYLIGHTITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYHEAVYITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
     font-weight: 800;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/assets/fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+    src: url("/assets/fonts/SFPRODISPLAYBLACKITALIC.woff2") format("woff2"), url("/assets/fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 
 @font-face {
     font-family: 'Nevera';
-    src: url('/assets/fonts/nevera/Nevera-Regular.otf') format('opentype');
+    src: url("/assets/fonts/nevera/Nevera-Regular.woff2") format("woff2"), url("/assets/fonts/nevera/Nevera-Regular.otf") format("opentype");
     font-weight: 600;
+    font-display: swap;
 }
 
 :root {
@@ -91,6 +101,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+picture {
+    display: contents;
 }
 
 body {
@@ -1161,6 +1175,12 @@ HERO EYEBROW — SMOOTH LETTER WAVE
     cursor: grab;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .hero-wrapper .stats .stat-carousel .step {
+        animation: none !important;
+    }
+}
+
 .hero-wrapper .stats .stat-carousel .step:active {
     cursor: grabbing;
 }
@@ -1261,7 +1281,7 @@ HERO EYEBROW — SMOOTH LETTER WAVE
     display: inline-flex;
     width: fit-content;
     color: rgb(36, 91, 194);
-    color: #635BFF;
+    color: #544BFF;
     padding: 4px 8px;
     opacity: 1;
     border-radius: 4px;
@@ -1836,7 +1856,7 @@ VALUE SECTION — stories stay inside the container, no overflow
     font-family: var(--font-family);
     font-size: 17px;
     font-weight: var(--fw-medium);
-    color: var(--story-color, rgb(165, 174, 187));
+    color: var(--story-color, #5F6C7E);
     background: none;
     border: none;
     border-left: 1px solid #e2e4e8;
@@ -1928,7 +1948,7 @@ VALUE SECTION — stories stay inside the container, no overflow
     font-size: 13px;
     gap: 14px;
     font-weight: var(--fw-bold);
-    color: #635BFF;
+    color: #544BFF;
     position: relative;
     opacity: 1;
 }
@@ -1951,8 +1971,8 @@ VALUE SECTION — stories stay inside the container, no overflow
 }
 
 .why-nexora .why-cont .why-grid .card .descr a  {
-    text-decoration: none;
-    color: #635bff;
+    text-decoration: underline;
+    color: #544BFF;
     transition: color.3s ease;
 }
 .why-nexora .why-cont .why-grid .card .descr a:hover {
@@ -3166,7 +3186,7 @@ CHEVRON BUTTON
 }
 
 
-.footer .content .top-nav .card nav a li {
+.footer .content .top-nav .card nav a span {
     font-size: 15px;
     line-height: 24px;
     font-weight: var(--fw-medium);
@@ -3183,12 +3203,12 @@ CHEVRON BUTTON
     gap: 2px;
 }
 
-.footer .content .top-nav .card nav a li:hover {
+.footer .content .top-nav .card nav a span:hover {
     /* color:rgb(104, 121, 138); */
     color:  #DDE4FF;
 }
 
-.footer .content .top-nav .card nav a li i {
+.footer .content .top-nav .card nav a span i {
     font-size: 15px;
 }
 
@@ -3217,7 +3237,8 @@ CHEVRON BUTTON
     gap: 20px;
 }
 
-.footer .content .bottom-nav nav a li {
+.footer .content .bottom-nav nav a span {
+    display: block;
     color: #ffffff;
     font-size: 14px;
     font-weight: var(--fw-medium);
@@ -3225,7 +3246,7 @@ CHEVRON BUTTON
     font-family: var(--font-family);
 }
 
-.footer .content .bottom-nav nav a li:hover {
+.footer .content .bottom-nav nav a span:hover {
     text-decoration: underline;
 }
 
