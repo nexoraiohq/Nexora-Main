@@ -430,7 +430,23 @@ if (carousel && step && statValues) {
         { passive: true }
     );
 
-    update();
+    const INITIAL_STORY_COLOR =
+        `rgb(${COLORS[0][0]}, ${COLORS[0][1]}, ${COLORS[0][2]})`;
+
+    frame.style.backgroundColor = INITIAL_STORY_COLOR;
+
+    if (navItems[0]) {
+        navItems[0].style.setProperty(
+            "--story-color",
+            INITIAL_STORY_COLOR
+        );
+
+        const initialSvg = navItems[0].querySelector(".nav-dot svg");
+
+        if (initialSvg) {
+            initialSvg.style.color = INITIAL_STORY_COLOR;
+        }
+    }
 })();
 
 
