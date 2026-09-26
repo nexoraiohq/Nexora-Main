@@ -3369,3 +3369,8 @@ CHEVRON BUTTON
 .final-cta .final-cta-cont .descr a:hover {
     color: #ffffff;
 }
+
+main > section:not(.hero-wrapper) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 700px;
+}

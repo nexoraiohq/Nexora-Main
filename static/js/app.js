@@ -973,13 +973,49 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     ============================================================
     INITIAL POSITION
+
+    Deferred until the section approaches the viewport.
+    Reading scrollWidth here would force layout of a section
+    that is still content-visibility: auto, pulling that work
+    into the critical path before first paint.
     ============================================================
     */
 
-    grid.scrollTo({
-        left: 0,
-        behavior: "auto"
-    });
+    function resetInitialPosition() {
+
+        grid.scrollTo({
+            left: 0,
+            behavior: "auto"
+        });
+
+    }
+
+    if (typeof IntersectionObserver === "function") {
+
+        const positionObserver = new IntersectionObserver(
+            function (entries, observer) {
+
+                for (const entry of entries) {
+
+                    if (entry.isIntersecting) {
+                        observer.disconnect();
+                        resetInitialPosition();
+                        break;
+                    }
+
+                }
+
+            },
+            { rootMargin: "600px 0px" }
+        );
+
+        positionObserver.observe(grid);
+
+    } else {
+
+        resetInitialPosition();
+
+    }
 
 });
 
