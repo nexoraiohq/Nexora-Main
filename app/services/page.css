@@ -1,0 +1,21 @@
+/* Desktop header fix */
+        .hero .header-wrapper {
+            z-index: 10;
+        }
+
+        /* White logo turns dark when header goes white on hover, so it never vanishes */
+        .hero .header .logo-img {
+            transition: filter 0.25s ease;
+        }
+
+        /* Mobile scroll fix – override any hidden overflow */
+        html,
+        body {
+            overflow-y: auto !important;
+            height: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .hero {
+            overflow: visible !important;
+        }

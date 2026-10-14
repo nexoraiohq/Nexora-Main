@@ -44,14 +44,15 @@ The studio primarily serves service-based businesses, including salons, barbersh
 
 ## Tech Stack
 
-This website is built using a lightweight frontend stack:
+The website is built on a modern Next.js stack while keeping the original lightweight front end:
 
-* **HTML5**
-* **CSS3**
-* **Vanilla JavaScript**
+* **Next.js 16** (App Router, static prerendering)
+* **TypeScript** + **React 19**
+* **CSS3** (original stylesheets, bundled by Next.js)
+* **Vanilla JavaScript** (interactions, PWA service worker)
 * **Vercel**
 
-The project focuses on semantic structure, responsive design, performance, polished UI, and a clear user experience without relying on a heavy frontend framework.
+The project focuses on semantic structure, responsive design, performance, polished UI, and a clear user experience. Clean URLs (`/about`, `/web-design-kisii`) are served with permanent redirects from the legacy `.html` paths, and every page is statically prerendered for SEO.
 
 ---
 
@@ -99,21 +100,22 @@ Each stage is designed to keep the business objective at the center of the digit
 
 ## Project Structure
 
-The project is organized as a frontend website with separate assets and page-level resources.
+The project is organized as a Next.js application. All pages are React components — there are no static HTML files.
 
 ```text
 nexora/
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── icons/
-├── pages/
-├── index.html
+├── app/                  # Next.js routes (page.tsx per route) + layout, sitemap, robots
+├── components/           # Shared SiteHeader / SiteFooter / JsonLd
+├── lib/                  # Site constants + JSON-LD schema builders
+├── public/
+│   ├── assets/           # Images, fonts, favicons
+│   ├── static/js/        # Vanilla interaction scripts + service worker
+│   ├── sw.js
+│   └── manifest.json
+├── static/css/           # Source stylesheets (imported by Next.js)
+├── next.config.ts        # Legacy .html → clean-URL redirects
 └── README.md
 ```
-
-> The exact structure may evolve as the project continues to develop.
 
 ---
 
