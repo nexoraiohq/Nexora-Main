@@ -22,6 +22,7 @@ const APP_SHELL = [
   "/spa-website-design-kenya",
   "/seo-services-kenya",
   "/manifest.json",
+  "/static/js/bodyclass.js",
   "/static/js/pwa.js",
   "/static/js/app.js",
   "/static/js/about.js",

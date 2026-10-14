@@ -1,3 +1,13 @@
+/* Run now if the document is already parsed (scripts load after hydration
+   in the Next.js app), otherwise wait for DOMContentLoaded like before. */
+function nexoraReady(fn) {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", fn);
+    } else {
+        fn();
+    }
+}
+
 document.querySelectorAll('.btn-primary').forEach(button => {
     const icon = button.querySelector('i');
 
@@ -451,7 +461,7 @@ if (carousel && step && statValues) {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+nexoraReady(() => {
 
     const eyebrow = document.querySelector(
         ".hero-wrapper .hero-cont .eyebrow"
@@ -617,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+nexoraReady(function () {
 
     const container = document.querySelector('.work .work-cont .work-grid-container');
     const leftArrow = document.querySelector('.arrow-left');
@@ -739,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+nexoraReady(function () {
 
     const languages = document.querySelectorAll(
         '.work .work-cont .work-grid-container .card .text-cont .group .grid .language'
@@ -815,7 +825,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+nexoraReady(function () {
 
     const testimonial = document.querySelector(".testimonial");
 

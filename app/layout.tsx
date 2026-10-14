@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -13,30 +14,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');`;
-
-/**
- * Per-route <body> classes are applied synchronously while the document is
- * still parsing, so the reveal animations start with the very first paint -
- * exactly like the original static site.
- */
-const BODY_CLASSES: Record<string, string> = {
-  "/": "reveal-on-load",
-  "/about": "reveal-on-load",
-  "/work": "reveal-on-load",
-  "/services": "reveal-on-load dark-hero-page",
-  "/contact": "reveal-on-load dark-hero-page",
-  "/web-design-kisii": "reveal-on-load dark-hero-page",
-  "/web-development-kisii": "reveal-on-load dark-hero-page",
-  "/web-design-kenya": "reveal-on-load dark-hero-page",
-  "/salon-website-design-kenya": "reveal-on-load dark-hero-page",
-  "/barbershop-website-kenya": "reveal-on-load dark-hero-page",
-  "/spa-website-design-kenya": "reveal-on-load dark-hero-page",
-  "/beauty-wellness-web-design": "reveal-on-load dark-hero-page",
-  "/booking-websites": "reveal-on-load dark-hero-page",
-  "/seo-services-kenya": "reveal-on-load dark-hero-page",
-};
-
-const BODY_CLASS_SNIPPET = `(function(){var m=${JSON.stringify(BODY_CLASSES)};var p=location.pathname.replace(/\\/$/,'')||'/';document.body.className=m[p]||'';})();`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexoraio.vercel.app"),
@@ -120,7 +97,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
         />
 
-        <script dangerouslySetInnerHTML={{ __html: GTM_SNIPPET }} />
+        <Script id="gtm" strategy="afterInteractive">
+          {GTM_SNIPPET}
+        </Script>
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -130,13 +109,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             title="Google Tag Manager"
           />
         </noscript>
-        <script dangerouslySetInnerHTML={{ __html: BODY_CLASS_SNIPPET }} />
+        <Script src="/static/js/bodyclass.js" strategy="beforeInteractive" />
 
         {children}
 
         <SiteFooter />
 
-        <script defer src="/static/js/pwa.js" />
+        <Script src="/static/js/pwa.js" strategy="afterInteractive" />
       </body>
     </html>
   );

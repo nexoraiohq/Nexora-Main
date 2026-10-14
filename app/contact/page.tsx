@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
 import "@/static/css/services/style.css";
@@ -539,8 +540,8 @@ export default function ContactPage() {
         </main>
       <JsonLd data={structuredData} />
 
-      <script defer src="/static/js/app.js" />
-      <script defer src="/static/js/contact.js" />
+      <Script src="/static/js/app.js" strategy="afterInteractive" />
+      <Script src="/static/js/contact.js" strategy="afterInteractive" />
     </>
   );
 }

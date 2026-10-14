@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
 import "@/static/css/services/style.css";
@@ -734,7 +735,7 @@ export default function SalonWebsiteDesignKenyaPage() {
         </main>
       <JsonLd data={structuredData} />
 
-      <script defer src="/static/js/app.js" />
+      <Script src="/static/js/app.js" strategy="afterInteractive" />
     </>
   );
 }

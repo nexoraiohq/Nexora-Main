@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/SiteHeader";
+import Script from "next/script";
 import "@/static/css/404.css";
 
 export default function NotFoundPage() {
@@ -156,8 +157,8 @@ export default function NotFoundPage() {
           {"\n\n\n    "}
         </main>
 
-      <script defer src="/static/js/app.js" />
-      <script defer src="/static/js/404.js" />
+      <Script src="/static/js/app.js" strategy="afterInteractive" />
+      <Script src="/static/js/404.js" strategy="afterInteractive" />
     </>
   );
 }

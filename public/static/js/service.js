@@ -1,4 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* Run now if the document is already parsed, otherwise wait for DOMContentLoaded. */
+function nexoraReady(fn) {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", fn);
+    } else {
+        fn();
+    }
+}
+
+nexoraReady(() => {
 
 
     document.querySelectorAll('.btn-primary').forEach(button => {
