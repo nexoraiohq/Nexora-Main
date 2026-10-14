@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import "@/static/css/work/style.css";
 
 export const metadata: Metadata = {
@@ -170,7 +171,8 @@ export default function WorkPage() {
   return (
     <>
         <SiteHeader variant={"dark"} isHome={false} waText={"Hi Nexora, I'm viewing your Work page and would like to talk about a similar project for my business."} waTextMobile={"Hi Nexora, I'm using the Work page menu and would like to start a conversation about a project."} />
-        <main>
+        <main id="main-content">
+          <Breadcrumbs items={[{ name: "Our Work" }]} />
           <section className="work-hero">
             <div className="cont">
               <div className="text">
@@ -204,7 +206,7 @@ export default function WorkPage() {
                       {"\n                                "}
                       <source type="image/webp" srcSet="/assets/proof-through-work/main-540.webp 540w, /assets/proof-through-work/main-921.webp 921w" sizes="(min-width: 768px) 460px, 160px" />
                       {"\n                                "}
-                      <img src="/assets/proof-through-work/main.png" alt="" loading="eager" width="921" height="1708" />
+                      <img src="/assets/proof-through-work/main.png" alt="" loading="eager" fetchPriority="high" width="921" height="1708" />
                       {"\n                            "}
                     </picture>
                     {"\n                            "}
@@ -228,7 +230,7 @@ export default function WorkPage() {
                   </div>
                   <div className="card card-2">
                     {"\n                            "}
-                    <img src="https://i.pinimg.com/736x/ab/29/b3/ab29b3c65013308dc054db371c6c3e4d.jpg" alt="" loading="eager" />
+                    <img src="/assets/work-cards/salon-beauty.jpg" alt="Salon and beauty website design preview" loading="lazy" width="736" height="1104" decoding="async" />
                     {"\n                            "}
                     <div className="overlay"></div>
                     <div className="content">
@@ -250,7 +252,7 @@ export default function WorkPage() {
                   </div>
                   <div className="card card-3">
                     {"\n                            "}
-                    <img src="https://i.pinimg.com/736x/91/e7/e2/91e7e238d8117313705d60c1f8433197.jpg" alt="" loading="eager" />
+                    <img src="/assets/work-cards/booking-websites.jpg" alt="Booking website design preview showing an appointment flow" loading="lazy" width="736" height="1551" decoding="async" />
                     {"\n                            "}
                     <div className="overlay"></div>
                     <div className="content">
@@ -272,7 +274,7 @@ export default function WorkPage() {
                   </div>
                   <div className="card card-4">
                     {"\n                            "}
-                    <img src="https://i.pinimg.com/1200x/8d/6c/f9/8d6cf9a1efda2ae4e279969e6cb83027.jpg" alt="" loading="eager" />
+                    <img src="/assets/work-cards/web-design-kisii.jpg" alt="Web design project preview for a business in Kisii" loading="lazy" width="1200" height="675" decoding="async" />
                     {"\n                            "}
                     <div className="overlay"></div>
                     <div className="content">
@@ -294,7 +296,7 @@ export default function WorkPage() {
                   </div>
                   <div className="card card-5">
                     {"\n                            "}
-                    <img src="https://i.pinimg.com/736x/58/23/87/5823870f82480db5cff20fa9e7cdabff.jpg" alt="" loading="eager" />
+                    <img src="/assets/work-cards/web-development-kisii.jpg" alt="Web development project preview for a growing Kisii business" loading="lazy" width="735" height="851" decoding="async" />
                     {"\n                            "}
                     <div className="overlay"></div>
                     <div className="content">
@@ -316,7 +318,7 @@ export default function WorkPage() {
                   </div>
                   <div className="card card-6">
                     {"\n                            "}
-                    <img src="https://i.pinimg.com/736x/5a/8f/88/5a8f88e75b9b72b16b074034a9e2e1b0.jpg" alt="" loading="eager" />
+                    <img src="/assets/work-cards/web-design-kenya.jpg" alt="Website design preview for a Kenyan business" loading="lazy" width="736" height="2118" decoding="async" />
                     {"\n                            "}
                     <div className="overlay"></div>
                     <div className="content">

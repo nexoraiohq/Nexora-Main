@@ -95,6 +95,7 @@ export function SiteHeader({
           id="mobileToggle"
           aria-label="Toggle navigation"
           aria-expanded="false"
+          aria-controls="mobileMenu"
         >
           <span></span>
           <span></span>

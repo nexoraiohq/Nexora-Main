@@ -61,6 +61,15 @@ export function SiteFooter() {
               <a href="/#faq">
                 <span>FAQ</span>
               </a>
+              <a href="/web-design-kisii">
+                <span>Web Design Kisii</span>
+              </a>
+              <a href="/web-development-kisii">
+                <span>Web Development Kisii</span>
+              </a>
+              <a href="/web-design-kenya">
+                <span>Web Design Kenya</span>
+              </a>
               <a href="/salon-website-design-kenya">
                 <span>Salon Websites</span>
               </a>

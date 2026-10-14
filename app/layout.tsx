@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import { SiteFooter } from "@/components/SiteFooter";
+import { JsonLd } from "@/components/JsonLd";
+import { organizationJsonLd } from "@/lib/jsonld";
 
 import "@/static/css/fontawesome.min.css";
 import "@/static/css/style.css";
@@ -68,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body suppressHydrationWarning>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <link
           rel="preload"
           href="/assets/fonts/SFPRODISPLAYREGULAR.woff2"
@@ -110,6 +113,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         <Script src="/static/js/bodyclass.js" strategy="beforeInteractive" />
+
+        <JsonLd data={organizationJsonLd()} />
 
         {children}
 

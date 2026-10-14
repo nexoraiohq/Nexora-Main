@@ -31,7 +31,7 @@ export function organizationJsonLd(): JsonLdNode {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": `${SITE_URL}/#organization`,
+        "@id": `${SITE_URL}/#business`,
         name: "Nexora Studio",
         alternateName: "Nexora",
         url: `${SITE_URL}/`,
@@ -42,6 +42,16 @@ export function organizationJsonLd(): JsonLdNode {
         email: "salonflow01@gmail.com",
         telephone: "+254713324672",
         priceRange: "KES 15,000 - KES 250,000",
+        knowsAbout: [
+          "web design Kisii",
+          "website development Kenya",
+          "salon websites",
+          "barbershop websites",
+          "spa websites",
+          "beauty and wellness web design",
+          "booking websites",
+          "local SEO Kenya",
+        ],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Kisii",
@@ -54,11 +64,16 @@ export function organizationJsonLd(): JsonLdNode {
           longitude: 34.7796,
         },
         areaServed: [
+          { "@type": "AdministrativeArea", name: "Kisii County" },
           { "@type": "City", name: "Kisii" },
-          { "@type": "City", name: "Nairobi" },
+          { "@type": "City", name: "Nyamira" },
+          { "@type": "City", name: "Migori" },
+          { "@type": "City", name: "Homa Bay" },
           { "@type": "City", name: "Kisumu" },
-          { "@type": "City", name: "Eldoret" },
+          { "@type": "City", name: "Kakamega" },
+          { "@type": "City", name: "Nairobi" },
           { "@type": "City", name: "Nakuru" },
+          { "@type": "City", name: "Eldoret" },
           { "@type": "City", name: "Mombasa" },
           { "@type": "Country", name: "Kenya" },
         ],
@@ -106,7 +121,7 @@ export function organizationJsonLd(): JsonLdNode {
         name: "Nexora Studio",
         description:
           "Web design and website development in Kisii, Kenya for salons, barbershops, spas and small businesses.",
-        publisher: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#business` },
         inLanguage: "en-KE",
         potentialAction: {
           "@type": "SearchAction",

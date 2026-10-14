@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import "@/static/css/services/style.css";
 import "@/static/css/contact/style.css";
 import "./page.css";
@@ -209,7 +210,8 @@ export default function ContactPage() {
             </p>
           </section>
         </section>
-        <main>
+        <main id="main-content">
+          <Breadcrumbs items={[{ name: "Contact" }]} />
           <section className="problem consequences how-we-work why-nexora">
             <div className="prob-cont consequences-cont how-we-work-cont why-cont">
               <p className="eyebrow">
@@ -516,7 +518,7 @@ export default function ContactPage() {
                   {"\n                        "}
                   <picture>
                     {"\n                            "}
-                    <source type="image/webp" srcSet="assets/contact-form-img-640.webp 640w, assets/contact-form-img-1024.webp 1024w" sizes="(min-width: 769px) 700px, max(calc(100vw - 40px), 400px)" />
+                    <source type="image/webp" srcSet="/assets/contact-form-img-640.webp 640w, /assets/contact-form-img-1024.webp 1024w" sizes="(min-width: 769px) 700px, max(calc(100vw - 40px), 400px)" />
                     {"\n                            "}
                     <img src="/assets/contact-form-img.jpg" alt="Team collaborating on a project" loading="lazy" width="1024" height="1024" decoding="async" />
                     {"\n                        "}

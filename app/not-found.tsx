@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <>
         <SiteHeader variant={"dark"} isHome={false} waText={"Hi Nexora, I landed on the 404 page and would like help finding the right place to start a project conversation."} waTextMobile={"Hi Nexora, I'm using the 404 page menu and would like to start a conversation about my project."} />
-        <main className="error-main">
+        <main className="error-main" id="main-content">
           <div className="error-container">
             <div className="error-text">
               <h1 className="error-title">

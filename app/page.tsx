@@ -67,12 +67,24 @@ const structuredData = {
       },
       "areaServed": [
         {
+          "@type": "AdministrativeArea",
+          "name": "Kisii County"
+        },
+        {
           "@type": "City",
           "name": "Kisii"
         },
         {
           "@type": "City",
-          "name": "Nairobi"
+          "name": "Nyamira"
+        },
+        {
+          "@type": "City",
+          "name": "Migori"
+        },
+        {
+          "@type": "City",
+          "name": "Homa Bay"
         },
         {
           "@type": "City",
@@ -80,11 +92,19 @@ const structuredData = {
         },
         {
           "@type": "City",
-          "name": "Eldoret"
+          "name": "Kakamega"
+        },
+        {
+          "@type": "City",
+          "name": "Nairobi"
         },
         {
           "@type": "City",
           "name": "Nakuru"
+        },
+        {
+          "@type": "City",
+          "name": "Eldoret"
         },
         {
           "@type": "City",
@@ -117,7 +137,141 @@ const structuredData = {
       ],
       "sameAs": [
         "https://nexoraio.vercel.app/"
+      ],
+      "knowsAbout": [
+        "web design Kisii",
+        "website development Kenya",
+        "salon websites",
+        "barbershop websites",
+        "spa websites",
+        "beauty and wellness web design",
+        "booking websites",
+        "local SEO Kenya"
       ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Web Design",
+      "name": "Web Design in Kisii, Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/web-design-kisii",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kisii County"
+        },
+        {
+          "@type": "City",
+          "name": "Kisii"
+        },
+        {
+          "@type": "Country",
+          "name": "Kenya"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Website Development",
+      "name": "Web Development in Kisii, Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/web-development-kisii",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kisii County"
+        },
+        {
+          "@type": "City",
+          "name": "Kisii"
+        },
+        {
+          "@type": "Country",
+          "name": "Kenya"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Salon Website Design",
+      "name": "Salon Website Design Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/salon-website-design-kenya",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Barbershop Website Design",
+      "name": "Barbershop Website Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/barbershop-website-kenya",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Spa Website Design",
+      "name": "Spa Website Design Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/spa-website-design-kenya",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Beauty and Wellness Web Design",
+      "name": "Beauty and Wellness Web Design",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/beauty-wellness-web-design",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Booking Website Development",
+      "name": "Booking Websites with WhatsApp Enquiries",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/booking-websites",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Search Engine Optimization",
+      "name": "SEO Services Kenya",
+      "provider": {
+        "@id": "https://nexoraio.vercel.app/#business"
+      },
+      "url": "https://nexoraio.vercel.app/seo-services-kenya",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      }
     },
     {
       "@type": "WebSite",
@@ -250,7 +404,7 @@ export default function HomePage() {
   return (
     <>
         <SiteHeader variant={"dark"} isHome={true} waText={"Hi Nexora, I'm on the homepage and would like to start a conversation about building a stronger digital system for my business."} waEncodeApos />
-        <main>
+        <main id="main-content">
           <section className="hero-wrapper">
             <div className="hero-cont">
               <p className="eyebrow">
@@ -356,7 +510,7 @@ export default function HomePage() {
                   {"\n                        "}
                   <picture>
                     {"\n                            "}
-                    <source type="image/webp" srcSet="assets/hard-to-convert-640.webp 640w, assets/hard-to-convert-1024.webp 1024w, assets/hard-to-convert-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)" />
+                      <source type="image/webp" srcSet="/assets/hard-to-convert-640.webp 640w, /assets/hard-to-convert-1024.webp 1024w, /assets/hard-to-convert-1536.webp 1536w" sizes="(min-width: 1024px) max(calc(100vw - 160px), 990px), max(calc(100vw - 60px), 390px)" />
                     {"\n                            "}
                     <img loading="lazy" src="/assets/hard-to-convert.png" alt="Hard to convert" width="1536" height="1024" decoding="async" />
                     {"\n                        "}
@@ -661,15 +815,7 @@ export default function HomePage() {
               <div className="soln-grid">
                 <div className="card">
                   <div className="image">
-                    {"\n                            "}
-                    <picture>
-                      {"\n                                "}
-                      <source type="image/webp" srcSet="/assets/Hard-to-be-discovered-640.webp 640w, /assets/Hard-to-be-discovered-1024.webp 1024w, /assets/Hard-to-be-discovered-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)" />
-                      {"\n                                "}
-                      <img src="/assets/Hard-to-be-discovered.png" alt="Illustration of a business that is difficult to discover online" loading="lazy" decoding="async" width="1536" height="1024" />
-                      {"\n                            "}
-                    </picture>
-                    {"\n                        "}
+                    <img src="/assets/system-strategy.svg" alt="Illustration of a clear strategic roadmap connecting discovery, priorities, and execution milestones" loading="lazy" decoding="async" width="1536" height="1024" />
                   </div>
                   <p className="eyebrow">
                     {"\n                            "}
@@ -695,15 +841,7 @@ export default function HomePage() {
                 </div>
                 <div className="card">
                   <div className="image">
-                    {"\n                            "}
-                    <picture>
-                      {"\n                                "}
-                      <source type="image/webp" srcSet="/assets/hard-to-convert-640.webp 640w, /assets/hard-to-convert-1024.webp 1024w, /assets/hard-to-convert-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)" />
-                      {"\n                                "}
-                      <img src="/assets/hard-to-convert.png" alt="Illustration of a business website that struggles to convert visitors" loading="lazy" decoding="async" width="1536" height="1024" />
-                      {"\n                            "}
-                    </picture>
-                    {"\n                        "}
+                    <img src="/assets/system-experience.svg" alt="Illustration of a customer journey from discovery to conversion with trust signals and conversion lift" loading="lazy" decoding="async" width="1536" height="1024" />
                   </div>
                   <p className="eyebrow">
                     {"\n                            "}
@@ -731,15 +869,7 @@ export default function HomePage() {
                 </div>
                 <div className="card">
                   <div className="image">
-                    {"\n                            "}
-                    <picture>
-                      {"\n                                "}
-                      <source type="image/webp" srcSet="/assets/hard-to-operate-640.webp 640w, /assets/hard-to-operate-1024.webp 1024w, /assets/hard-to-operate-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)" />
-                      {"\n                                "}
-                      <img src="/assets/hard-to-operate.png" alt="Illustration of disconnected business systems that are hard to operate" loading="lazy" decoding="async" width="1536" height="1024" />
-                      {"\n                            "}
-                    </picture>
-                    {"\n                        "}
+                    <img src="/assets/system-systems.svg" alt="Illustration of connected business systems—bookings, payments, inventory, and messages—synced through one core platform" loading="lazy" decoding="async" width="1536" height="1024" />
                   </div>
                   <p className="eyebrow">
                     {"\n                            "}
@@ -773,15 +903,7 @@ export default function HomePage() {
                 </div>
                 <div className="card">
                   <div className="image">
-                    {"\n                            "}
-                    <picture>
-                      {"\n                                "}
-                      <source type="image/webp" srcSet="/assets/hard-to-scale-640.webp 640w, /assets/hard-to-scale-1024.webp 1024w, /assets/hard-to-scale-1536.webp 1536w" sizes="(min-width: 768px) max(calc((100vw - 208px) / 2), 480px), max(calc(100vw - 60px), 480px)" />
-                      {"\n                                "}
-                      <img src="/assets/hard-to-scale.png" alt="Illustration of a digital foundation that is hard to scale" loading="lazy" decoding="async" width="1536" height="1024" />
-                      {"\n                            "}
-                    </picture>
-                    {"\n                        "}
+                    <img src="/assets/system-intelligence.svg" alt="Illustration of a performance dashboard showing visitor growth, leads, and a monthly upward trend" loading="lazy" decoding="async" width="1536" height="1024" />
                   </div>
                   <p className="eyebrow">
                     {"\n                            "}
@@ -1236,7 +1358,7 @@ export default function HomePage() {
                       {"\n                                "}
                       <picture>
                         {"\n                                    "}
-                        <source type="image/webp" srcSet="assets/proof-through-work/overlay-540.webp 540w, assets/proof-through-work/overlay-921.webp 921w" sizes="270px" />
+                        <source type="image/webp" srcSet="/assets/proof-through-work/overlay-540.webp 540w, /assets/proof-through-work/overlay-921.webp 921w" sizes="270px" />
                         {"\n                                    "}
                         <img loading="lazy" src="/assets/proof-through-work/overlay.png" alt="Nexora digital experience" width="921" height="1708" decoding="async" />
                         {"\n                                "}
@@ -1247,7 +1369,7 @@ export default function HomePage() {
                       {"\n                                "}
                       <picture>
                         {"\n                                    "}
-                        <source type="image/webp" srcSet="assets/proof-through-work/main-540.webp 540w, assets/proof-through-work/main-921.webp 921w" sizes="267px" />
+                        <source type="image/webp" srcSet="/assets/proof-through-work/main-540.webp 540w, /assets/proof-through-work/main-921.webp 921w" sizes="267px" />
                         {"\n                                    "}
                         <img src="/assets/proof-through-work/main.png" alt="States Barbershop website homepage designed and built by Nexora Studio" loading="lazy" decoding="async" width="921" height="1708" />
                         {"\n                                "}
@@ -1490,7 +1612,7 @@ export default function HomePage() {
                             <div className="top-flex">
                               <div className="images">
                                 {"\n                                                    "}
-                                <img loading="lazy" src="https://i.pinimg.com/1200x/bf/d6/b5/bfd6b5ead3e81c7d0ff530a2a6c98de3.jpg" alt="" />
+                                <img loading="lazy" src="/assets/testimonials/states-barbershop.jpg" alt="" width="822" height="822" decoding="async" />
                                 {"\n                                                "}
                               </div>
                               <div className="details">
@@ -1543,7 +1665,7 @@ export default function HomePage() {
                             <div className="top-flex">
                               <div className="images">
                                 {"\n                                                    "}
-                                <img loading="lazy" src="https://i.pinimg.com/736x/b1/34/99/b134994fcdca206150a4307a3b2dc0b9.jpg" alt="" />
+                                <img loading="lazy" src="/assets/testimonials/spa-wellness.jpg" alt="" width="718" height="813" decoding="async" />
                                 {"\n                                                "}
                               </div>
                               <div className="details">
@@ -1596,7 +1718,7 @@ export default function HomePage() {
                             <div className="top-flex">
                               <div className="images">
                                 {"\n                                                    "}
-                                <img loading="lazy" src="https://i.pinimg.com/1200x/f2/8c/da/f28cdabe70e63432b7bae68d21be0a9b.jpg" alt="" />
+                                <img loading="lazy" src="/assets/testimonials/salon-beauty.jpg" alt="" width="1199" height="1043" decoding="async" />
                                 {"\n                                                "}
                               </div>
                               <div className="details">
@@ -1649,7 +1771,7 @@ export default function HomePage() {
                             <div className="top-flex">
                               <div className="images">
                                 {"\n                                                    "}
-                                <img loading="lazy" src="https://i.pinimg.com/736x/ab/80/f3/ab80f3c9e645817f9bb62808878ee6d7.jpg" alt="" />
+                                <img loading="lazy" src="/assets/testimonials/wellness-studio.jpg" alt="" width="736" height="1158" decoding="async" />
                                 {"\n                                                "}
                               </div>
                               <div className="details">

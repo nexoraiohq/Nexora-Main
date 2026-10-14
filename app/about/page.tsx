@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import "@/static/css/about/about.css";
 
 export const metadata: Metadata = {
@@ -170,7 +171,8 @@ export default function AboutPage() {
   return (
     <>
         <SiteHeader variant={"dark"} isHome={false} waText={"Hi Nexora, I'm on the About page and would like to learn whether Nexora is the right digital partner for my business."} waTextMobile={"Hi Nexora, I'm using the About page menu and would like to start a conversation about working together."} />
-        <main>
+        <main id="main-content">
+          <Breadcrumbs items={[{ name: "About" }]} />
           <section className="hero">
             <div className="content">
               <p className="eyebrow">
@@ -398,7 +400,7 @@ export default function AboutPage() {
                   <div className="founder-img">
                     <div className="image">
                       {"\n"}
-                      <img src="/assets/founder-profile.jpg" alt="Kenyatta Michael, founder of Nexora Studio" loading="lazy" />
+                      <img src="/assets/founder-profile.jpg" alt="Kenyatta Michael, founder of Nexora Studio" loading="lazy" width="300" height="300" decoding="async" />
                       {"\n                            "}
                     </div>
                   </div>
@@ -431,7 +433,7 @@ export default function AboutPage() {
               {"\n                "}
               <picture>
                 {"\n                    "}
-                <source type="image/webp" srcSet="assets/nexora-about-img-640.webp 640w, assets/nexora-about-img-1000.webp 1000w" sizes="(min-width: 769px) max(calc(50vw - 60px), 566px), max(calc(100vw - 40px), 320px)" />
+                <source type="image/webp" srcSet="/assets/nexora-about-img-640.webp 640w, /assets/nexora-about-img-1000.webp 1000w" sizes="(min-width: 769px) max(calc(50vw - 60px), 566px), max(calc(100vw - 40px), 320px)" />
                 {"\n                    "}
                 <img src="/assets/nexora-about-img.jpg" alt="The way we work matters as much as what we build - Nexora Studio" loading="lazy" width="1000" height="1000" decoding="async" />
                 {"\n                "}

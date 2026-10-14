@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import "@/static/css/services/style.css";
 import "./page.css";
 
@@ -227,7 +228,8 @@ export default function WebDesignKenyaPage() {
             </div>
           </section>
         </section>
-        <main>
+        <main id="main-content">
+          <Breadcrumbs items={[{ name: "Web Design Kenya" }]} />
           <section className="problem capabilities" id="kenya-services">
             <div className="prob-cont capabilities-cont">
               <p className="eyebrow">

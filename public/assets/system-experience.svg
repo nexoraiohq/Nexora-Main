@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-label="Customer journey experience dashboard illustration">
+  <defs>
+    <linearGradient id="ebg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE4EF"/>
+      <stop offset=".55" stop-color="#F6F7FB"/>
+      <stop offset="1" stop-color="#E0F4FF"/>
+    </linearGradient>
+    <filter id="esh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#8B93A7" flood-opacity=".22"/>
+    </filter>
+    <linearGradient id="eacc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00B8D9"/>
+      <stop offset="1" stop-color="#2F6BFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1536" height="1024" fill="url(#ebg)"/>
+  <ellipse cx="110" cy="970" rx="520" ry="340" fill="#FFC9DE" opacity=".42"/>
+  <ellipse cx="1460" cy="80" rx="420" ry="300" fill="#C9E9FF" opacity=".55"/>
+
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <rect x="88" y="150" width="74" height="58" rx="14" fill="none" stroke="#00B8D9" stroke-width="3"/>
+    <text x="125" y="190" font-size="30" font-weight="700" fill="#0093B8" text-anchor="middle">02</text>
+    <text x="88" y="310" font-size="72" font-weight="800" fill="#101828">Experiences</text>
+    <text x="88" y="392" font-size="72" font-weight="800" fill="#101828">that earn trust</text>
+    <rect x="88" y="430" width="86" height="8" rx="4" fill="#00B8D9"/>
+    <text x="88" y="502" font-size="24" fill="#475467">Design customer journeys and touchpoints</text>
+    <text x="88" y="540" font-size="24" fill="#475467">that are easy to understand, trust</text>
+    <text x="88" y="578" font-size="24" fill="#475467">and act on.</text>
+  </g>
+
+  <g filter="url(#esh)">
+    <rect x="620" y="96" width="830" height="560" rx="26" fill="#FFFFFF"/>
+  </g>
+  <g>
+    <circle cx="668" cy="140" r="9" fill="#E4E9F2"/>
+    <circle cx="698" cy="140" r="9" fill="#E4E9F2"/>
+    <circle cx="728" cy="140" r="9" fill="#E4E9F2"/>
+    <rect x="780" y="124" width="420" height="32" rx="16" fill="#F1F4F9"/>
+  </g>
+
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <text x="668" y="220" font-size="30" font-weight="700" fill="#101828">Customer Journey</text>
+    <text x="668" y="254" font-size="18" fill="#667085">From first visit to loyal customer</text>
+  </g>
+
+  <path d="M760 360 C 860 300, 960 420, 1060 360 S 1260 300, 1360 360" stroke="url(#eacc)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="1 0"/>
+  <g filter="url(#esh)"><circle cx="760" cy="360" r="34" fill="#FFFFFF"/></g>
+  <circle cx="760" cy="360" r="34" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="4"/>
+  <path d="M748 360 h24 M760 348 v24" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+  <g filter="url(#esh)"><circle cx="1060" cy="360" r="34" fill="#FFFFFF"/></g>
+  <circle cx="1060" cy="360" r="34" fill="#E0F7FB" stroke="#00B8D9" stroke-width="4"/>
+  <path d="M1046 366 l8 -10 l7 7 l10 -13" stroke="#0093B8" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#esh)"><circle cx="1360" cy="360" r="34" fill="#FFFFFF"/></g>
+  <circle cx="1360" cy="360" r="34" fill="#EAFBF3" stroke="#12B76A" stroke-width="4"/>
+  <path d="M1345 360 l10 10 l20 -22" stroke="#12B76A" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="17" font-weight="600" fill="#475467">
+    <text x="760" y="428" text-anchor="middle">Discover</text>
+    <text x="1060" y="428" text-anchor="middle">Engage</text>
+    <text x="1360" y="428" text-anchor="middle">Convert</text>
+  </g>
+
+  <g filter="url(#esh)">
+    <rect x="668" y="480" width="360" height="142" rx="18" fill="#FFFFFF"/>
+    <rect x="1060" y="480" width="360" height="142" rx="18" fill="#FFFFFF"/>
+  </g>
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <text x="704" y="522" font-size="16" fill="#667085">Trust signals</text>
+    <text x="704" y="556" font-size="27" font-weight="800" fill="#101828">Clear. Consistent.</text>
+    <g>
+      <rect x="704" y="578" width="120" height="26" rx="13" fill="#EAF0FF"/>
+      <text x="764" y="596" font-size="14" font-weight="700" fill="#2F6BFF" text-anchor="middle">Brand</text>
+      <rect x="834" y="578" width="120" height="26" rx="13" fill="#E0F7FB"/>
+      <text x="894" y="596" font-size="14" font-weight="700" fill="#0093B8" text-anchor="middle">Reviews</text>
+    </g>
+
+    <text x="1096" y="522" font-size="16" fill="#667085">Conversion lift</text>
+    <text x="1096" y="556" font-size="27" font-weight="800" fill="#101828">+38%</text>
+    <path d="M1096 600 C 1140 596, 1180 580, 1220 572 S 1300 560, 1380 542" stroke="#12B76A" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="1380" cy="542" r="8" fill="#12B76A"/>
+  </g>
+</svg>

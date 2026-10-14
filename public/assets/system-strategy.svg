@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-label="Strategy roadmap dashboard illustration">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE4EF"/>
+      <stop offset=".55" stop-color="#F6F7FB"/>
+      <stop offset="1" stop-color="#E7E0FF"/>
+    </linearGradient>
+    <filter id="ssh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#8B93A7" flood-opacity=".22"/>
+    </filter>
+    <linearGradient id="sacc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2F6BFF"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1536" height="1024" fill="url(#sbg)"/>
+  <ellipse cx="120" cy="960" rx="520" ry="360" fill="#FFC9DE" opacity=".45"/>
+  <ellipse cx="1450" cy="90" rx="420" ry="300" fill="#D9CCFF" opacity=".5"/>
+
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <rect x="88" y="150" width="74" height="58" rx="14" fill="none" stroke="#2F6BFF" stroke-width="3"/>
+    <text x="125" y="190" font-size="30" font-weight="700" fill="#2F6BFF" text-anchor="middle">01</text>
+    <text x="88" y="310" font-size="72" font-weight="800" fill="#101828">Clear strategic</text>
+    <text x="88" y="392" font-size="72" font-weight="800" fill="#101828">direction</text>
+    <rect x="88" y="430" width="86" height="8" rx="4" fill="#2F6BFF"/>
+    <text x="88" y="502" font-size="24" fill="#475467">Turn ambition into focused priorities</text>
+    <text x="88" y="540" font-size="24" fill="#475467">and a roadmap the whole business</text>
+    <text x="88" y="578" font-size="24" fill="#475467">can follow with confidence.</text>
+  </g>
+
+  <g filter="url(#ssh)">
+    <rect x="620" y="96" width="830" height="560" rx="26" fill="#FFFFFF"/>
+  </g>
+  <g>
+    <circle cx="668" cy="140" r="9" fill="#E4E9F2"/>
+    <circle cx="698" cy="140" r="9" fill="#E4E9F2"/>
+    <circle cx="728" cy="140" r="9" fill="#E4E9F2"/>
+    <rect x="780" y="124" width="420" height="32" rx="16" fill="#F1F4F9"/>
+  </g>
+
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <text x="668" y="220" font-size="30" font-weight="700" fill="#101828">Growth Roadmap</text>
+    <text x="668" y="254" font-size="18" fill="#667085">Quarterly priorities and milestones</text>
+  </g>
+
+  <g stroke="#DCE3EF" stroke-width="4" stroke-linecap="round">
+    <line x1="700" y1="380" x2="1380" y2="380"/>
+  </g>
+  <path d="M700 380 H 1120" stroke="url(#sacc)" stroke-width="6" stroke-linecap="round"/>
+  <g>
+    <circle cx="700" cy="380" r="20" fill="#2F6BFF"/>
+    <path d="M691 380 l7 7 l13 -15" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="910" cy="380" r="20" fill="#7C5CFF"/>
+    <circle cx="910" cy="380" r="8" fill="#fff"/>
+    <circle cx="1120" cy="380" r="22" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="6"/>
+    <circle cx="1330" cy="380" r="16" fill="#E4E9F2"/>
+  </g>
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="17" font-weight="600" fill="#475467">
+    <text x="700" y="432" text-anchor="middle">Discover</text>
+    <text x="910" y="432" text-anchor="middle">Prioritise</text>
+    <text x="1120" y="432" text-anchor="middle">Roadmap</text>
+    <text x="1330" y="432" text-anchor="middle" fill="#98A2B3">Execute</text>
+  </g>
+
+  <g filter="url(#ssh)">
+    <rect x="700" y="486" width="330" height="132" rx="18" fill="#FFFFFF"/>
+    <rect x="1060" y="486" width="330" height="132" rx="18" fill="#FFFFFF"/>
+  </g>
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <circle cx="748" cy="532" r="20" fill="#EAF0FF"/>
+    <path d="M748 522 v20 M738 532 h20" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+    <text x="782" y="530" font-size="16" fill="#667085">Priority focus</text>
+    <text x="782" y="560" font-size="26" font-weight="800" fill="#101828">Top 3 goals</text>
+    <rect x="728" y="586" width="240" height="10" rx="5" fill="#EAF0FF"/>
+    <rect x="728" y="586" width="170" height="10" rx="5" fill="#2F6BFF"/>
+
+    <circle cx="1108" cy="532" r="20" fill="#F1EBFF"/>
+    <path d="M1100 538 l6 -8 l5 5 l7 -10" stroke="#7C5CFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1142" y="530" font-size="16" fill="#667085">Roadmap progress</text>
+    <text x="1142" y="560" font-size="26" font-weight="800" fill="#101828">On track</text>
+    <rect x="1088" y="586" width="240" height="10" rx="5" fill="#F1EBFF"/>
+    <rect x="1088" y="586" width="200" height="10" rx="5" fill="#7C5CFF"/>
+  </g>
+
+  <g filter="url(#ssh)">
+    <rect x="1240" y="620" width="210" height="190" rx="20" fill="#FFFFFF"/>
+  </g>
+  <g font-family="SF Pro Display, Inter, Arial, sans-serif">
+    <circle cx="1290" cy="672" r="24" fill="#FFF1F4"/>
+    <circle cx="1290" cy="672" r="10" fill="#FF6B8A"/>
+    <circle cx="1290" cy="672" r="17" fill="none" stroke="#FF6B8A" stroke-width="3" opacity=".55"/>
+    <text x="1328" y="668" font-size="15" fill="#667085">Target set</text>
+    <text x="1328" y="694" font-size="20" font-weight="800" fill="#101828">Q1 – Q4</text>
+    <rect x="1272" y="726" width="146" height="9" rx="4.5" fill="#F1F4F9"/>
+    <rect x="1272" y="748" width="110" height="9" rx="4.5" fill="#F1F4F9"/>
+    <rect x="1272" y="770" width="130" height="9" rx="4.5" fill="#F1F4F9"/>
+  </g>
+</svg>
