@@ -1,4 +1,5 @@
 import { whatsappLink } from "@/lib/site";
+import { LOGO_DARK_DATA_URI, LOGO_WHITE_DATA_URI } from "@/lib/logos";
 
 type SiteHeaderProps = {
   /** "white" renders the light logo used on dark hero pages */
@@ -26,12 +27,11 @@ export function SiteHeader({
   const capabilitiesHref = isHome ? "#capabilities" : "/#capabilities";
   const white = variant === "white";
 
-  const logoSrc = white ? "/assets/logo-white/favicon.svg" : "/assets/logo/favicon.svg";
+  const logoSrc = white ? LOGO_WHITE_DATA_URI : LOGO_DARK_DATA_URI;
 
   return (
     <div className="header-wrapper">
       <header className="header" role="banner">
-        <link rel="preload" href={logoSrc} as="image" />
         <div className="logo">
           <a href="/" className="logo-link" aria-label="Nexora home">
             <img
