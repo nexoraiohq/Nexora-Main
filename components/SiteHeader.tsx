@@ -26,16 +26,19 @@ export function SiteHeader({
   const capabilitiesHref = isHome ? "#capabilities" : "/#capabilities";
   const white = variant === "white";
 
+  const logoSrc = white ? "/assets/logo-white/favicon.svg" : "/assets/logo/favicon.svg";
+
   return (
     <div className="header-wrapper">
       <header className="header" role="banner">
+        <link rel="preload" href={logoSrc} as="image" />
         <div className="logo">
           <a href="/" className="logo-link" aria-label="Nexora home">
             <img
               className={white ? "logo-text logo-img" : "logo-text"}
-              src={white ? "/assets/logo-white/favicon.svg" : "/assets/logo/favicon.svg"}
-              width="143px"
-              height="auto"
+              src={logoSrc}
+              width="143"
+              height="95"
               alt="Nexora Studio logo"
               loading="eager"
               fetchPriority="high"

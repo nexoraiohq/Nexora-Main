@@ -73,21 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main-content" className="skip-link">Skip to content</a>
         <link
           rel="preload"
-          href="/assets/fonts/SFPRODISPLAYREGULAR.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
           href="/assets/fonts/SFPRODISPLAYMEDIUM.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/assets/fonts/SFPRODISPLAYBOLD.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
