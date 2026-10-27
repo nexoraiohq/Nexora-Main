@@ -123,14 +123,9 @@ export function organizationJsonLd(): JsonLdNode {
           "Web design and website development in Kisii, Kenya for salons, barbershops, spas and small businesses.",
         publisher: { "@id": `${SITE_URL}/#business` },
         inLanguage: "en-KE",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${SITE_URL}/?s={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
+        // NOTE: no SearchAction here on purpose. The site has no search page,
+        // and advertising a `?s={search_term_string}` URL made Google crawl and
+        // index a phantom query URL that served a duplicate of the homepage.
       },
     ],
   };
