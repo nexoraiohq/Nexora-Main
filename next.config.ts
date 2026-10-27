@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  experimental: {
+    // Requested by the Next.js security upgrade agent (16.4.0 -> 16.4.3).
+    agentUpgrade: "security",
+  },
   images: {
     // All imagery is already pre-optimised (webp + png fallbacks) and served
     // from /public, so the Next.js image optimiser stays out of the way.
