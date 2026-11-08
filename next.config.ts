@@ -21,38 +21,6 @@ const htmlRedirects: { source: string; destination: string; permanent: boolean }
   { source: "/seo-services-kenya.html", destination: "/seo-services-kenya" },
 ].map(({ source, destination }) => ({ source, destination, permanent: true }));
 
-/**
- * ── Marketing domain ──
- * The marketing landing page has ONE public URL:
- *   https://marketing.nexoraio.vercel.app/
- *
- * - The subdomain's root ("/") is rewritten to the internal landing route.
- * - On the marketing subdomain the internal path 308s back to the clean "/".
- * - On the main production domain the internal path 301s straight to
- *   https://marketing.nexoraio.vercel.app/ so /marketing is never a public URL.
- *   (Localhost / preview hosts keep serving it so it can be developed.)
- */
-const MARKETING_HOST = "marketing.nexoraio.vercel.app";
-const MARKETING_HOST_RE = "^marketing\\.nexoraio\\.vercel\\.app$";
-const MAIN_HOST_RE = "^nexoraio\\.vercel\\.app$";
-
-const marketingRedirects = [
-  // marketing.nexoraio.vercel.app/marketing → marketing.nexoraio.vercel.app/
-  {
-    source: "/marketing",
-    destination: "/",
-    permanent: true,
-    has: [{ type: "host" as const, value: MARKETING_HOST_RE }],
-  },
-  // nexoraio.vercel.app/marketing → https://marketing.nexoraio.vercel.app/
-  {
-    source: "/marketing",
-    destination: `https://${MARKETING_HOST}/`,
-    permanent: true,
-    has: [{ type: "host" as const, value: MAIN_HOST_RE }],
-  },
-];
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -67,17 +35,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    return [...marketingRedirects, ...htmlRedirects];
+    return [...htmlRedirects];
   },
   async rewrites() {
     return {
-      beforeFiles: [
-        {
-          source: "/",
-          destination: "/marketing",
-          has: [{ type: "host", value: MARKETING_HOST_RE }],
-        },
-      ],
+      beforeFiles: [],
       afterFiles: [],
       fallback: [],
     };
