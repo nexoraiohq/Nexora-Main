@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 
-import { SiteFooter } from "@/components/SiteFooter";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationJsonLd } from "@/lib/jsonld";
 
@@ -103,8 +102,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={organizationJsonLd()} />
 
         {children}
-
-        <SiteFooter />
 
         <Script src="/static/js/pwa.js" strategy="afterInteractive" />
       </body>
